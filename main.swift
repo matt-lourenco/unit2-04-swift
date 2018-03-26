@@ -6,6 +6,8 @@
 //  Copyright © 2018 MTHS. All rights reserved.
 //
 
+import Foundation
+
 class MyStack<InType> {
 	//this is a class that defines a stack
 
@@ -56,9 +58,12 @@ class MyStack<InType> {
 	}
 }
 
+srand(UInt32(time(nil)))
+
 let stackObject = MyStack<Int>()
-stackObject.push(object: 0)
-stackObject.push(object: 4)
+stackObject.push(object: Int(random()%(21)))
+stackObject.push(object: Int(random()%(21)))
+stackObject.push(object: Int(random()%(21)))
 stackObject.printContents()
 
 print("The last oject is \(try stackObject.peek())")
